@@ -1,0 +1,40 @@
+﻿@model BIID.Entities.Tip
+
+@{
+    ViewBag.Title = "Details";
+     Layout = "~/Views/Shared/_LayoutOfAdmin.cshtml";
+}
+
+
+<h2>Details Tips</h2>
+
+<fieldset>
+    <legend>Tips</legend>
+
+     <div class="display-label">Item</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Item.Name)
+    </div>
+    
+    
+    <div class="display-label">TipsTopic</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TipsTopic)
+    </div>
+
+    <div class="display-label">Tips</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Tips)
+    </div>
+
+    <div class="display-label">Remarks</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Remarks)
+    </div>
+
+   
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

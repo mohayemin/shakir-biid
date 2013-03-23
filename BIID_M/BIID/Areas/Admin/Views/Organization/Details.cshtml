@@ -1,0 +1,56 @@
+﻿@model BIID.Entities.SupplierAddress
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutOfAdmin.cshtml";
+}
+
+<h2>Details Supplier Address</h2>
+
+<fieldset>
+    <legend>Supplier Address</legend>
+
+    <div class="display-label">DetailsSupplierInfo</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DetailsSupplierInfo.Name)
+    </div>
+
+    <div class="display-label">CustomerDistrict</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CustomerDistrict.Name)
+    </div>
+
+    <div class="display-label">CustomerUpozilla</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CustomerUpozilla.Name)
+    </div>
+
+    <div class="display-label">Address</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Address)
+    </div>
+
+    <div class="display-label">Contact</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Contact)
+    </div>
+
+    <div class="display-label">Email</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email)
+    </div>
+
+    <div class="display-label">Remarks</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Remarks)
+    </div>
+
+    <div class="display-label">WebAddress</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WebAddress)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

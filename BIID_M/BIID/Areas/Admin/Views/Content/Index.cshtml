@@ -1,0 +1,50 @@
+﻿@using BIID.Implementations
+@model IEnumerable<BIID.Entities.Content>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutOfAdmin.cshtml";
+    
+ var implAgricultural = new ImplAgriculturalService();
+}
+
+<h2>List of Contents</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            Sector Name
+        </th>
+        <th>
+            ContentName
+        </th>
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+         <td>
+            @if (item.SectorId != null)
+            {
+                @implAgricultural.GetSectorById((int) item.SectorId).Name
+            }
+
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContentName)
+        </td>
+       
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,28 @@
+﻿@model BIID.Entities.Item
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutOfAdmin.cshtml";
+}
+
+<h2>Item Details</h2>
+
+<fieldset>
+    <legend>Item</legend>
+    
+     <div class="display-label">Category</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Category.Name)
+    </div>
+
+    <div class="display-label">Name</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+   
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,54 @@
+﻿@model BIID.Entities.EquipmentAndTechnology
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutOfAdmin.cshtml";
+}
+
+<h2>Details Equipment And Technology</h2>
+
+<fieldset>
+    <legend>Equipment And Technology</legend>
+
+      <div class="display-label">Item</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Item.Name)
+    </div>
+    
+    
+    <div class="display-label">NameOfEquipment</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NameOfEquipment)
+    </div>
+
+    <div class="display-label">Brief</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Brief)
+    </div>
+
+    <div class="display-label">HowToUse</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HowToUse)
+    </div>
+
+    <div class="display-label">Precaution</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Precaution)
+    </div>
+
+    <div class="display-label">Availability</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Availability)
+    </div>
+
+    <div class="display-label">Remarks</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Remarks)
+    </div>
+
+  
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

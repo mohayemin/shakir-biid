@@ -1,0 +1,57 @@
+﻿@model BIID.Entities.AgriculturalCulturalOperation
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutOfAdmin.cshtml";
+}
+}
+
+<h2>Delete Agricultural Cultural Operation</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Agricultural Cultural Operation</legend>
+
+     <div class="display-label">Item</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Item.Name)
+    </div>
+    
+    <div class="display-label">NameOfOperation</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NameOfOperation)
+    </div>
+
+    <div class="display-label">EarlyStage</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EarlyStage)
+    </div>
+
+    <div class="display-label">MidStage</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MidStage)
+    </div>
+
+    <div class="display-label">BeforeFinalStage</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BeforeFinalStage)
+    </div>
+
+    <div class="display-label">FinalStage</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FinalStage)
+    </div>
+
+    <div class="display-label">Remarks</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Remarks)
+    </div>
+
+   
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

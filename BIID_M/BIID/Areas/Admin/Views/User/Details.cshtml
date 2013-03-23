@@ -1,0 +1,50 @@
+﻿@model BIID.Entities.User
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutOfAdmin.cshtml";
+}
+}
+
+<h2>Details User</h2>
+
+<fieldset>
+    <legend>User</legend>
+
+    
+     <div class="display-label">AuthorizationLevel</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RoleId)
+    </div>
+    
+    <div class="display-label">UserName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserName)
+    </div>
+
+    <div class="display-label">Password</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Password)
+    </div>
+
+    <div class="display-label">Email</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email)
+    </div>
+
+    <div class="display-label">Address</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Address)
+    </div>
+
+    <div class="display-label">PhoneNumber</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PhoneNumber)
+    </div>
+
+   
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

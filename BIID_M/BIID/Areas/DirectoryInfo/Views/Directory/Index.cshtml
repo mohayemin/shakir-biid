@@ -1,0 +1,300 @@
+﻿@using System.Collections
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+ <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+
+
+<!--@Html.Partial("Create", null)-->
+
+
+<table class="position">
+    <tr>
+        <td>
+            
+             Sector
+
+        </td>
+        <td>
+            @Html.DropDownList("sectors", new SelectList((IEnumerable)ViewData["sectors"], "Id", "Name"), null, new { style = "width:150px;" }) 
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            Directory Category
+        </td>
+
+        <td>
+            <select id="categories" style="width: 150px;">
+
+            </select>
+        </td>
+    </tr>
+      <tr>
+    <td>
+        
+  
+      Organization Name  
+        
+
+    </td>
+  
+        <td>
+            <select id="organizations" style="width: 150px;">
+
+            </select>
+        </td>
+    </tr>
+    <tr>
+        
+        <td>
+            
+            Distrist
+
+        </td>
+
+        <td>
+            <select id="districts" style="width: 150px;">
+
+            </select>
+        </td>
+    </tr>
+    
+     
+    <tr>
+        
+        
+        <td>
+            
+            Upozilla
+
+        </td>
+        <td>
+            <select id="upozillas" style="width: 150px;">
+
+            </select>
+        </td>
+    </tr>
+    <tr>
+    <td></td>
+        <td>
+            <button id="search">Search </button>
+        
+        </td>
+    </tr>
+   
+</table>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#customerTable").hide();
+    });
+</script>
+<script type="text/javascript">
+
+    $('#sectors').click(function () {
+        var selectedSector = $(this).val();
+        if (selectedSector != null && selectedSector != '') {
+            $.getJSON('@Url.Action("Categories")', { sectorId: selectedSector }, function (Categories) {
+                var categorySelect = $('#categories');
+                categorySelect.empty();
+                $.each(Categories, function (index, category) {
+                    categorySelect.append($('<option/>', {
+                        value: category.value,
+                        text: category.text
+                    }));
+                });
+            });
+        }
+    });
+
+</script>
+
+<script type="text/javascript">
+
+    $('#categories').click(function () {
+        var selectedCategory = $(this).val();
+        if (selectedCategory != null && selectedCategory != '') {
+            $.getJSON('@Url.Action("Organizations")', { supplierCategoryId: selectedCategory }, function (Organizations) {
+                var OrganizationSelect = $('#organizations');
+                OrganizationSelect.empty();
+                $.each(Organizations, function (index, organization) {
+                    OrganizationSelect.append($('<option/>', {
+                        value: organization.value,
+                        text: organization.text
+                    }));
+                });
+            });
+        }
+    });
+
+</script>
+
+<script type="text/javascript">
+
+    $('#organizations').click(function () {
+        var selectedOrganization = $(this).val();
+        if (selectedOrganization != null && selectedOrganization != '') {
+            $.getJSON('@Url.Action("Districts")', { detailsupplierinfoId: selectedOrganization }, function (Districts) {
+                var DistrictSelect = $('#districts');
+                DistrictSelect.empty();
+                $.each(Districts, function (index, district) {
+                    DistrictSelect.append($('<option/>', {
+                        value: district.value,
+                        text: district.text
+                    }));
+                });
+            });
+        }
+    });
+
+</script>
+
+
+<script type="text/javascript">
+
+    $('#districts').click(function () {
+        var selectedDistrict = $(this).val();
+        if (selectedDistrict != null && selectedDistrict != '') {
+            $.getJSON('@Url.Action("Upozillas")', { DistrictId: selectedDistrict }, function (Upozillas) {
+                var upozillaselect = $('#upozillas');
+                upozillaselect.empty();
+                $.each(Upozillas, function (index, upozilla) {
+                    upozillaselect.append($('<option/>', {
+                        value: upozilla.value,
+                        text: upozilla.text
+                    }));
+                });
+            });
+        }
+    });
+
+</script>
+  <div style="padding: 5px">
+            
+        </div>
+<button id="test">Hide/Expand</button>
+    <div id="searchresultdiv">
+        <table id="quicksearch">
+             <div style="padding: 5px">
+            
+        </div>
+            <th>Sector</th>
+            <th>Category</th>
+            <th>Organization Name</th>
+            <th>District</th>
+            <th>Upozilla</th>
+            <th>Address</th>
+            <th>Contact</th>
+            <th>Email</th>
+            <th>Remarks</th>
+        </table>
+    </div>
+
+
+<html>
+<head>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+</head>
+<body>
+  
+    <script id="SearchResultTemplate" type="text/x-jquery-tmpl">
+        <tr>
+                {{tmpl "#sectorTemplate"}}
+                {{tmpl "#orgCategoryTemplate"}}
+                {{tmpl "#orgNameTemplate"}}
+                {{tmpl "#addressTemplate"}}
+                
+            </tr>
+    </script>
+    
+    <script id="sectorTemplate" type="text/x-jquery-tmpl">
+        <td>
+        {{each sectorList}}
+        ${$value.value} ,
+        {{/each}}
+        </td>
+    </script>
+    
+    <script id="orgNameTemplate" type="text/x-jquery-tmpl">
+        <td>${orgName}</td>
+    </script>
+    
+    <script id="orgCategoryTemplate" type="text/x-jquery-tmpl">
+        <td>${orgCategory}</td>
+    </script>
+    
+    <script id="addressTemplate" type="text/x-jquery-tmpl">
+        
+        {{each addressList}}
+        
+        {{if ($index > 0)}} <tr><td></td><td></td><td></td> {{/if}} 
+                <td>${district}</td>
+                <td>${upozilla}</td>
+                <td>${address}</td>
+                <td>${contact}</td>
+                <td>${email}</td>
+                <td>${remarks}</td>
+                
+               {{if ($index > 0)}} </tr>{{/if}} 
+            {{/each}}
+
+        
+    </script>
+    
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#test").hide();
+            $("#searchresultdiv").hide();
+        });
+
+    </script>
+    <script type="text/javascript">
+
+
+        $('#search').click(function () {
+            $("#searchresultdiv").show();
+            var selectedSector = $("#sectors").val();
+            var selectedCategory = $("#categories").val();
+            var selectedOrganization = $("#organizations").val();
+            var selectedDistrict = $("#districts").val();
+            var selectedUpozilla = $("#upozillas").val();
+
+
+            var sectorId = selectedSector;
+            var categoryId = selectedCategory;
+            var organizationId = selectedOrganization;
+            var districtId = selectedDistrict;
+            var upozillaId = selectedUpozilla;
+
+
+
+
+            $.getJSON('@Url.Action("SearchInDirectories")', { sectorId: 1, categoryId: 1, organizationId: 2, districtId: 3, upozillaId: 2 }, function (QuickSearch) {
+                $("#SearchResultTemplate").tmpl(QuickSearch).appendTo("#quicksearch");
+                $("#test").show();
+            });
+
+
+        });
+
+    </script>
+    <script type="text/javascript">
+        $("#test").click(function () {
+            $("#searchresultdiv").toggle();
+            //$(this).hide();
+        });
+        
+    </script>
+</body>
+</html>
+

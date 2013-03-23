@@ -1,0 +1,926 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BIIDFinalModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="BIIDFinalModelStoreContainer">
+    <EntitySet Name="AgriculturalCulturalOperation" EntityType="BIIDFinalModel.Store.AgriculturalCulturalOperation" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BirdAndLivestockCulturalOperation" EntityType="BIIDFinalModel.Store.BirdAndLivestockCulturalOperation" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BirdAndLiveStockVaccination" EntityType="BIIDFinalModel.Store.BirdAndLiveStockVaccination" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Category" EntityType="BIIDFinalModel.Store.Category" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Content" EntityType="BIIDFinalModel.Store.Content" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CustmerProfile" EntityType="BIIDFinalModel.Store.CustmerProfile" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CustomerDistrict" EntityType="BIIDFinalModel.Store.CustomerDistrict" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CustomerSearch" EntityType="BIIDFinalModel.Store.CustomerSearch" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CustomerUpozilla" EntityType="BIIDFinalModel.Store.CustomerUpozilla" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DetailsSupplierInfo" EntityType="BIIDFinalModel.Store.DetailsSupplierInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DiseaseAndPestManagement" EntityType="BIIDFinalModel.Store.DiseaseAndPestManagement" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EquipmentAndTechnology" EntityType="BIIDFinalModel.Store.EquipmentAndTechnology" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Fertilizer" EntityType="BIIDFinalModel.Store.Fertilizer" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FishCulturalOperation" EntityType="BIIDFinalModel.Store.FishCulturalOperation" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HarvestingManagement" EntityType="BIIDFinalModel.Store.HarvestingManagement" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Item" EntityType="BIIDFinalModel.Store.Item" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LivestockFeedPreservation" EntityType="BIIDFinalModel.Store.LivestockFeedPreservation" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="NutritionalStatus" EntityType="BIIDFinalModel.Store.NutritionalStatus" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OrganizationSectorRelation" EntityType="BIIDFinalModel.Store.OrganizationSectorRelation" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Planting" EntityType="BIIDFinalModel.Store.Planting" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PreparationOfFeed" EntityType="BIIDFinalModel.Store.PreparationOfFeed" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sector" EntityType="BIIDFinalModel.Store.Sector" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SeedProduction" EntityType="BIIDFinalModel.Store.SeedProduction" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SupplierAddresses" EntityType="BIIDFinalModel.Store.SupplierAddresses" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SupplierCategory" EntityType="BIIDFinalModel.Store.SupplierCategory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SupplierDistrict" EntityType="BIIDFinalModel.Store.SupplierDistrict" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SupplierUpozilla" EntityType="BIIDFinalModel.Store.SupplierUpozilla" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sysdiagrams" EntityType="BIIDFinalModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tips" EntityType="BIIDFinalModel.Store.Tips" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="User" EntityType="BIIDFinalModel.Store.User" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserLog" EntityType="BIIDFinalModel.Store.UserLog" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserRole" EntityType="BIIDFinalModel.Store.UserRole" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Variety" EntityType="BIIDFinalModel.Store.Variety" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_AgriculturalCulturalOperation_Item" Association="BIIDFinalModel.Store.FK_AgriculturalCulturalOperation_Item">
+      <End Role="Item" EntitySet="Item" />
+      <End Role="AgriculturalCulturalOperation" EntitySet="AgriculturalCulturalOperation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BirdAndLivestockCulturalOperation_Item1" Association="BIIDFinalModel.Store.FK_BirdAndLivestockCulturalOperation_Item1">
+      <End Role="Item" EntitySet="Item" />
+      <End Role="BirdAndLivestockCulturalOperation" EntitySet="BirdAndLivestockCulturalOperation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BirdAndLiveStockVaccination_Item" Association="BIIDFinalModel.Store.FK_BirdAndLiveStockVaccination_Item">
+      <End Role="Item" EntitySet="Item" />
+      <End Role="BirdAndLiveStockVaccination" EntitySet="BirdAndLiveStockVaccination" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Category_Sector" Association="BIIDFinalModel.Store.FK_Category_Sector">
+      <End Role="Sector" EntitySet="Sector" />
+      <End Role="Category" EntitySet="Category" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CustomerSearch_CustomerSearch" Association="BIIDFinalModel.Store.FK_CustomerSearch_CustomerSearch">
+      <End Role="CustmerProfile" EntitySet="CustmerProfile" />
+      <End Role="CustomerSearch" EntitySet="CustomerSearch" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CustomerUpozilla_CustomerDistrict" Association="BIIDFinalModel.Store.FK_CustomerUpozilla_CustomerDistrict">
+      <End Role="CustomerDistrict" EntitySet="CustomerDistrict" />
+      <End Role="CustomerUpozilla" EntitySet="CustomerUpozilla" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DetailsSupplierInfo_SupplierCategory" Association="BIIDFinalModel.Store.FK_DetailsSupplierInfo_SupplierCategory">
+      <End Role="SupplierCategory" EntitySet="SupplierCategory" />
+      <End Role="DetailsSupplierInfo" EntitySet="DetailsSupplierInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DiseaseAndPestManagement_Item" Association="BIIDFinalModel.Store.FK_DiseaseAndPestManagement_Item">
+      <End Role="Item" EntitySet="Item" />
+      <End Role="DiseaseAndPestManagement" EntitySet="DiseaseAndPestManagement" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DiseaseAndPestManagement_SupplierAddresses" Association="BIIDFinalModel.Store.FK_DiseaseAndPestManagement_SupplierAddresses">
+      <End Role="SupplierAddresses" EntitySet="SupplierAddresses" />
+      <End Role="DiseaseAndPestManagement" EntitySet="DiseaseAndPestManagement" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EquipmentAndTechnology_Item" Association="BIIDFinalModel.Store.FK_EquipmentAndTechnology_Item">
+      <End Role="Item" EntitySet="Item" />
+      <End Role="EquipmentAndTechnology" EntitySet="EquipmentAndTechnology" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Fertilizer_Item" Association="BIIDFinalModel.Store.FK_Fertilizer_Item">
+      <End Role="Item" EntitySet="Item" />
+      <End Role="Fertilizer" EntitySet="Fertilizer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FishCulturalOperation_Item" Association="BIIDFinalModel.Store.FK_FishCulturalOperation_Item">
+      <End Role="Item" EntitySet="Item" />
+      <End Role="FishCulturalOperation" EntitySet="FishCulturalOperation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HarvestingManagement_Item" Association="BIIDFinalModel.Store.FK_HarvestingManagement_Item">
+      <End Role="Item" EntitySet="Item" />
+      <End Role="HarvestingManagement" EntitySet="HarvestingManagement" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Item_Category" Association="BIIDFinalModel.Store.FK_Item_Category">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="Item" EntitySet="Item" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LivestockFeedPreservation_Item" Association="BIIDFinalModel.Store.FK_LivestockFeedPreservation_Item">
+      <End Role="Item" EntitySet="Item" />
+      <End Role="LivestockFeedPreservation" EntitySet="LivestockFeedPreservation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NutritionalStatus_Item" Association="BIIDFinalModel.Store.FK_NutritionalStatus_Item">
+      <End Role="Item" EntitySet="Item" />
+      <End Role="NutritionalStatus" EntitySet="NutritionalStatus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrganizationSectorRelation_DetailsSupplierInfo1" Association="BIIDFinalModel.Store.FK_OrganizationSectorRelation_DetailsSupplierInfo1">
+      <End Role="DetailsSupplierInfo" EntitySet="DetailsSupplierInfo" />
+      <End Role="OrganizationSectorRelation" EntitySet="OrganizationSectorRelation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrganizationSectorRelation_Sector" Association="BIIDFinalModel.Store.FK_OrganizationSectorRelation_Sector">
+      <End Role="Sector" EntitySet="Sector" />
+      <End Role="OrganizationSectorRelation" EntitySet="OrganizationSectorRelation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Planting_Item" Association="BIIDFinalModel.Store.FK_Planting_Item">
+      <End Role="Item" EntitySet="Item" />
+      <End Role="Planting" EntitySet="Planting" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PreparationOfFeed_Item" Association="BIIDFinalModel.Store.FK_PreparationOfFeed_Item">
+      <End Role="Item" EntitySet="Item" />
+      <End Role="PreparationOfFeed" EntitySet="PreparationOfFeed" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SeedProduction_Item" Association="BIIDFinalModel.Store.FK_SeedProduction_Item">
+      <End Role="Item" EntitySet="Item" />
+      <End Role="SeedProduction" EntitySet="SeedProduction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SupplierAddresses_CustomerDistrict" Association="BIIDFinalModel.Store.FK_SupplierAddresses_CustomerDistrict">
+      <End Role="CustomerDistrict" EntitySet="CustomerDistrict" />
+      <End Role="SupplierAddresses" EntitySet="SupplierAddresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SupplierAddresses_CustomerUpozilla" Association="BIIDFinalModel.Store.FK_SupplierAddresses_CustomerUpozilla">
+      <End Role="CustomerUpozilla" EntitySet="CustomerUpozilla" />
+      <End Role="SupplierAddresses" EntitySet="SupplierAddresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SupplierAddresses_DetailsSupplierInfo" Association="BIIDFinalModel.Store.FK_SupplierAddresses_DetailsSupplierInfo">
+      <End Role="DetailsSupplierInfo" EntitySet="DetailsSupplierInfo" />
+      <End Role="SupplierAddresses" EntitySet="SupplierAddresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SupplierCategory_Sector" Association="BIIDFinalModel.Store.FK_SupplierCategory_Sector">
+      <End Role="Sector" EntitySet="Sector" />
+      <End Role="SupplierCategory" EntitySet="SupplierCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SupplierDistrict_CustomerDistrict" Association="BIIDFinalModel.Store.FK_SupplierDistrict_CustomerDistrict">
+      <End Role="CustomerDistrict" EntitySet="CustomerDistrict" />
+      <End Role="SupplierDistrict" EntitySet="SupplierDistrict" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SupplierUpozilla_CustomerUpozilla" Association="BIIDFinalModel.Store.FK_SupplierUpozilla_CustomerUpozilla">
+      <End Role="CustomerUpozilla" EntitySet="CustomerUpozilla" />
+      <End Role="SupplierUpozilla" EntitySet="SupplierUpozilla" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SupplierUpozilla_SupplierDistrict" Association="BIIDFinalModel.Store.FK_SupplierUpozilla_SupplierDistrict">
+      <End Role="SupplierDistrict" EntitySet="SupplierDistrict" />
+      <End Role="SupplierUpozilla" EntitySet="SupplierUpozilla" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tips_Item" Association="BIIDFinalModel.Store.FK_Tips_Item">
+      <End Role="Item" EntitySet="Item" />
+      <End Role="Tips" EntitySet="Tips" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_UserRole" Association="BIIDFinalModel.Store.FK_User_UserRole">
+      <End Role="UserRole" EntitySet="UserRole" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserLog_User" Association="BIIDFinalModel.Store.FK_UserLog_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="UserLog" EntitySet="UserLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Variety_DetailsSupplierInfo" Association="BIIDFinalModel.Store.FK_Variety_DetailsSupplierInfo">
+      <End Role="DetailsSupplierInfo" EntitySet="DetailsSupplierInfo" />
+      <End Role="Variety" EntitySet="Variety" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Variety_Item" Association="BIIDFinalModel.Store.FK_Variety_Item">
+      <End Role="Item" EntitySet="Item" />
+      <End Role="Variety" EntitySet="Variety" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AgriculturalCulturalOperation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NameOfOperation" Type="nvarchar" MaxLength="500" />
+    <Property Name="EarlyStage" Type="nvarchar" MaxLength="500" />
+    <Property Name="MidStage" Type="nvarchar" MaxLength="500" />
+    <Property Name="BeforeFinalStage" Type="nvarchar" MaxLength="500" />
+    <Property Name="FinalStage" Type="nvarchar" MaxLength="500" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="500" />
+    <Property Name="ItemId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BirdAndLivestockCulturalOperation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="StageName" Type="nvarchar" MaxLength="500" />
+    <Property Name="HouseManagement" Type="nvarchar" MaxLength="500" />
+    <Property Name="LightManagement" Type="nvarchar" MaxLength="500" />
+    <Property Name="HeatManagement" Type="nvarchar" MaxLength="500" />
+    <Property Name="FoodManagement" Type="nvarchar" MaxLength="500" />
+    <Property Name="FarmManagement" Type="nvarchar" MaxLength="500" />
+    <Property Name="Precaution" Type="nvarchar" MaxLength="500" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="500" />
+    <Property Name="ItemId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BirdAndLiveStockVaccination">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Age" Type="nvarchar" MaxLength="500" />
+    <Property Name="NameOfDisease" Type="nvarchar" MaxLength="500" />
+    <Property Name="NameOfVaccine" Type="nvarchar" MaxLength="500" />
+    <Property Name="ApplicationProcedure" Type="nvarchar" MaxLength="500" />
+    <Property Name="Precaution" Type="nvarchar" MaxLength="500" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="500" />
+    <Property Name="ItemId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="500" />
+    <Property Name="SectorId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Content">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ContentName" Type="nvarchar" MaxLength="500" />
+    <Property Name="SectorId" Type="int" />
+  </EntityType>
+  <EntityType Name="CustmerProfile">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerId" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="CustomerName" Type="nvarchar" MaxLength="500" />
+    <Property Name="Contact" Type="nvarchar" MaxLength="500" />
+    <Property Name="Email" Type="nvarchar" MaxLength="500" />
+    <Property Name="District" Type="nvarchar" MaxLength="500" />
+    <Property Name="Upazilla" Type="nvarchar" MaxLength="500" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="500" />
+    <Property Name="Complain" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CustomerDistrict">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="CustomerSearch">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CustmerId" Type="int" Nullable="false" />
+    <Property Name="SearchSubjectId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CustomerUpozilla">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="500" />
+    <Property Name="DistrictId" Type="int" />
+  </EntityType>
+  <EntityType Name="DetailsSupplierInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="500" />
+    <Property Name="SupplierCategoryId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DiseaseAndPestManagement">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="500" />
+    <Property Name="Symptoms" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Preventive" Type="nvarchar" MaxLength="500" />
+    <Property Name="ControlMeasures" Type="nvarchar" MaxLength="500" />
+    <Property Name="DetailsSupplierId" Type="int" Nullable="false" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="500" />
+    <Property Name="ItemId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EquipmentAndTechnology">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NameOfEquipment" Type="nvarchar" MaxLength="500" />
+    <Property Name="Brief" Type="nvarchar" MaxLength="500" />
+    <Property Name="HowToUse" Type="nvarchar" MaxLength="500" />
+    <Property Name="Precaution" Type="nvarchar" MaxLength="500" />
+    <Property Name="Availability" Type="nvarchar" MaxLength="500" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="500" />
+    <Property Name="ItemId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Fertilizer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Particulars" Type="nvarchar" MaxLength="500" />
+    <Property Name="TotalAmount" Type="nvarchar" MaxLength="500" />
+    <Property Name="Fertilizer1" Type="nvarchar" MaxLength="500" />
+    <Property Name="Fertilizer2" Type="nvarchar" MaxLength="500" />
+    <Property Name="Fertilizer3" Type="nvarchar" MaxLength="500" />
+    <Property Name="Fertilizer4" Type="nvarchar" MaxLength="500" />
+    <Property Name="Fertilizer5" Type="nvarchar" MaxLength="500" />
+    <Property Name="Precaution" Type="nvarchar" MaxLength="500" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="500" />
+    <Property Name="ItemId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FishCulturalOperation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ManagementName" Type="nvarchar" MaxLength="500" />
+    <Property Name="PondManagement" Type="nvarchar" MaxLength="500" />
+    <Property Name="WaterManagement" Type="nvarchar" MaxLength="500" />
+    <Property Name="FoodManagement" Type="nvarchar" MaxLength="500" />
+    <Property Name="Density" Type="nvarchar" MaxLength="500" />
+    <Property Name="Process" Type="nvarchar" MaxLength="500" />
+    <Property Name="AgeLimit" Type="nvarchar" MaxLength="500" />
+    <Property Name="Precaution" Type="nvarchar" MaxLength="500" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="500" />
+    <Property Name="ItemId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HarvestingManagement">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="HarvestingTime" Type="nvarchar" MaxLength="500" />
+    <Property Name="Systems" Type="nvarchar" MaxLength="500" />
+    <Property Name="Procedures" Type="nvarchar" MaxLength="500" />
+    <Property Name="Threshing" Type="nvarchar" MaxLength="500" />
+    <Property Name="Packaging" Type="nvarchar" MaxLength="500" />
+    <Property Name="Storage" Type="nvarchar" MaxLength="500" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="500" />
+    <Property Name="ItemId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Item">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="500" />
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LivestockFeedPreservation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Ingradient" Type="nvarchar" MaxLength="500" />
+    <Property Name="Amount" Type="nvarchar" MaxLength="500" />
+    <Property Name="Process" Type="nvarchar" MaxLength="500" />
+    <Property Name="Duration" Type="nvarchar" MaxLength="500" />
+    <Property Name="FeedUse" Type="nvarchar" MaxLength="500" />
+    <Property Name="Precaution" Type="nvarchar" MaxLength="500" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="500" />
+    <Property Name="ItemId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NutritionalStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AmountOfNutrient" Type="nvarchar" MaxLength="500" />
+    <Property Name="FoodValue" Type="nvarchar" MaxLength="500" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="500" />
+    <Property Name="ItemId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrganizationSectorRelation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OrganizationId" Type="int" Nullable="false" />
+    <Property Name="SectorId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Planting">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SoliType" Type="nvarchar" MaxLength="500" />
+    <Property Name="PlantingTime" Type="nvarchar" MaxLength="500" />
+    <Property Name="PlantingSystems" Type="nvarchar" MaxLength="500" />
+    <Property Name="PlantingSpace" Type="nvarchar" MaxLength="500" />
+    <Property Name="Seeding" Type="nvarchar" MaxLength="500" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="500" />
+    <Property Name="ItemId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PreparationOfFeed">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FeedName" Type="nvarchar" MaxLength="500" />
+    <Property Name="Ingredient" Type="nvarchar" MaxLength="500" />
+    <Property Name="Amount" Type="nvarchar" MaxLength="500" />
+    <Property Name="Process" Type="nvarchar" MaxLength="500" />
+    <Property Name="Precaution" Type="nvarchar" MaxLength="500" />
+    <Property Name="FeedClass" Type="nvarchar" MaxLength="500" />
+    <Property Name="TypesOfFeed" Type="nvarchar" MaxLength="500" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="500" />
+    <Property Name="ItemId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sector">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="SeedProduction">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProcedureOfSeed" Type="nvarchar" MaxLength="500" />
+    <Property Name="Condition" Type="nvarchar" MaxLength="500" />
+    <Property Name="SeedStorage" Type="nvarchar" MaxLength="500" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="500" />
+    <Property Name="ItemId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SupplierAddresses">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DetailsSupplierId" Type="int" Nullable="false" />
+    <Property Name="DistrictId" Type="int" Nullable="false" />
+    <Property Name="UpozillaId" Type="int" Nullable="false" />
+    <Property Name="Address" Type="text" />
+    <Property Name="Contact" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="200" />
+    <Property Name="WebAddress" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="SupplierCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="500" />
+    <Property Name="SectorId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SupplierDistrict">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DistrictId" Type="int" Nullable="false" />
+    <Property Name="DetailsSupplierInfoId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SupplierUpozilla">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UpozilaId" Type="int" Nullable="false" />
+    <Property Name="DistrictId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Tips">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TipsTopic" Type="nvarchar" MaxLength="500" />
+    <Property Name="Tips" Type="nvarchar" MaxLength="500" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="500" />
+    <Property Name="ItemId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="nvarchar(max)" />
+    <Property Name="Password" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar" MaxLength="500" />
+    <Property Name="Address" Type="nvarchar" MaxLength="500" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="500" />
+    <Property Name="RoleId" Type="int" />
+  </EntityType>
+  <EntityType Name="UserLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Activity" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="DateTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="nvarchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Variety">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="VarietyName" Type="nvarchar" MaxLength="500" />
+    <Property Name="Kharip1" Type="nvarchar" MaxLength="500" />
+    <Property Name="Kharip2" Type="nvarchar" MaxLength="500" />
+    <Property Name="RobiIndustrious" Type="nvarchar" MaxLength="500" />
+    <Property Name="AlltheYear" Type="nvarchar" MaxLength="500" />
+    <Property Name="DetailsSupplierId" Type="int" Nullable="false" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="500" />
+    <Property Name="ItemId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_AgriculturalCulturalOperation_Item">
+    <End Role="Item" Type="BIIDFinalModel.Store.Item" Multiplicity="1" />
+    <End Role="AgriculturalCulturalOperation" Type="BIIDFinalModel.Store.AgriculturalCulturalOperation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AgriculturalCulturalOperation">
+        <PropertyRef Name="ItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BirdAndLivestockCulturalOperation_Item1">
+    <End Role="Item" Type="BIIDFinalModel.Store.Item" Multiplicity="1" />
+    <End Role="BirdAndLivestockCulturalOperation" Type="BIIDFinalModel.Store.BirdAndLivestockCulturalOperation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BirdAndLivestockCulturalOperation">
+        <PropertyRef Name="ItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BirdAndLiveStockVaccination_Item">
+    <End Role="Item" Type="BIIDFinalModel.Store.Item" Multiplicity="1" />
+    <End Role="BirdAndLiveStockVaccination" Type="BIIDFinalModel.Store.BirdAndLiveStockVaccination" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BirdAndLiveStockVaccination">
+        <PropertyRef Name="ItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Category_Sector">
+    <End Role="Sector" Type="BIIDFinalModel.Store.Sector" Multiplicity="1" />
+    <End Role="Category" Type="BIIDFinalModel.Store.Category" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sector">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Category">
+        <PropertyRef Name="SectorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CustomerSearch_CustomerSearch">
+    <End Role="CustmerProfile" Type="BIIDFinalModel.Store.CustmerProfile" Multiplicity="1" />
+    <End Role="CustomerSearch" Type="BIIDFinalModel.Store.CustomerSearch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CustmerProfile">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CustomerSearch">
+        <PropertyRef Name="CustmerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CustomerUpozilla_CustomerDistrict">
+    <End Role="CustomerDistrict" Type="BIIDFinalModel.Store.CustomerDistrict" Multiplicity="0..1" />
+    <End Role="CustomerUpozilla" Type="BIIDFinalModel.Store.CustomerUpozilla" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CustomerDistrict">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CustomerUpozilla">
+        <PropertyRef Name="DistrictId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DetailsSupplierInfo_SupplierCategory">
+    <End Role="SupplierCategory" Type="BIIDFinalModel.Store.SupplierCategory" Multiplicity="1" />
+    <End Role="DetailsSupplierInfo" Type="BIIDFinalModel.Store.DetailsSupplierInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SupplierCategory">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DetailsSupplierInfo">
+        <PropertyRef Name="SupplierCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DiseaseAndPestManagement_Item">
+    <End Role="Item" Type="BIIDFinalModel.Store.Item" Multiplicity="1" />
+    <End Role="DiseaseAndPestManagement" Type="BIIDFinalModel.Store.DiseaseAndPestManagement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DiseaseAndPestManagement">
+        <PropertyRef Name="ItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DiseaseAndPestManagement_SupplierAddresses">
+    <End Role="SupplierAddresses" Type="BIIDFinalModel.Store.SupplierAddresses" Multiplicity="1" />
+    <End Role="DiseaseAndPestManagement" Type="BIIDFinalModel.Store.DiseaseAndPestManagement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SupplierAddresses">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DiseaseAndPestManagement">
+        <PropertyRef Name="DetailsSupplierId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EquipmentAndTechnology_Item">
+    <End Role="Item" Type="BIIDFinalModel.Store.Item" Multiplicity="1" />
+    <End Role="EquipmentAndTechnology" Type="BIIDFinalModel.Store.EquipmentAndTechnology" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="EquipmentAndTechnology">
+        <PropertyRef Name="ItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Fertilizer_Item">
+    <End Role="Item" Type="BIIDFinalModel.Store.Item" Multiplicity="1" />
+    <End Role="Fertilizer" Type="BIIDFinalModel.Store.Fertilizer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Fertilizer">
+        <PropertyRef Name="ItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FishCulturalOperation_Item">
+    <End Role="Item" Type="BIIDFinalModel.Store.Item" Multiplicity="1" />
+    <End Role="FishCulturalOperation" Type="BIIDFinalModel.Store.FishCulturalOperation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FishCulturalOperation">
+        <PropertyRef Name="ItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HarvestingManagement_Item">
+    <End Role="Item" Type="BIIDFinalModel.Store.Item" Multiplicity="1" />
+    <End Role="HarvestingManagement" Type="BIIDFinalModel.Store.HarvestingManagement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="HarvestingManagement">
+        <PropertyRef Name="ItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Item_Category">
+    <End Role="Category" Type="BIIDFinalModel.Store.Category" Multiplicity="1" />
+    <End Role="Item" Type="BIIDFinalModel.Store.Item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Item">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LivestockFeedPreservation_Item">
+    <End Role="Item" Type="BIIDFinalModel.Store.Item" Multiplicity="1" />
+    <End Role="LivestockFeedPreservation" Type="BIIDFinalModel.Store.LivestockFeedPreservation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="LivestockFeedPreservation">
+        <PropertyRef Name="ItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NutritionalStatus_Item">
+    <End Role="Item" Type="BIIDFinalModel.Store.Item" Multiplicity="1" />
+    <End Role="NutritionalStatus" Type="BIIDFinalModel.Store.NutritionalStatus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NutritionalStatus">
+        <PropertyRef Name="ItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrganizationSectorRelation_DetailsSupplierInfo1">
+    <End Role="DetailsSupplierInfo" Type="BIIDFinalModel.Store.DetailsSupplierInfo" Multiplicity="1" />
+    <End Role="OrganizationSectorRelation" Type="BIIDFinalModel.Store.OrganizationSectorRelation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DetailsSupplierInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrganizationSectorRelation">
+        <PropertyRef Name="OrganizationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrganizationSectorRelation_Sector">
+    <End Role="Sector" Type="BIIDFinalModel.Store.Sector" Multiplicity="1" />
+    <End Role="OrganizationSectorRelation" Type="BIIDFinalModel.Store.OrganizationSectorRelation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sector">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrganizationSectorRelation">
+        <PropertyRef Name="SectorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Planting_Item">
+    <End Role="Item" Type="BIIDFinalModel.Store.Item" Multiplicity="1" />
+    <End Role="Planting" Type="BIIDFinalModel.Store.Planting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Planting">
+        <PropertyRef Name="ItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PreparationOfFeed_Item">
+    <End Role="Item" Type="BIIDFinalModel.Store.Item" Multiplicity="1" />
+    <End Role="PreparationOfFeed" Type="BIIDFinalModel.Store.PreparationOfFeed" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PreparationOfFeed">
+        <PropertyRef Name="ItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SeedProduction_Item">
+    <End Role="Item" Type="BIIDFinalModel.Store.Item" Multiplicity="1" />
+    <End Role="SeedProduction" Type="BIIDFinalModel.Store.SeedProduction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SeedProduction">
+        <PropertyRef Name="ItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SupplierAddresses_CustomerDistrict">
+    <End Role="CustomerDistrict" Type="BIIDFinalModel.Store.CustomerDistrict" Multiplicity="1" />
+    <End Role="SupplierAddresses" Type="BIIDFinalModel.Store.SupplierAddresses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CustomerDistrict">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SupplierAddresses">
+        <PropertyRef Name="DistrictId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SupplierAddresses_CustomerUpozilla">
+    <End Role="CustomerUpozilla" Type="BIIDFinalModel.Store.CustomerUpozilla" Multiplicity="1" />
+    <End Role="SupplierAddresses" Type="BIIDFinalModel.Store.SupplierAddresses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CustomerUpozilla">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SupplierAddresses">
+        <PropertyRef Name="UpozillaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SupplierAddresses_DetailsSupplierInfo">
+    <End Role="DetailsSupplierInfo" Type="BIIDFinalModel.Store.DetailsSupplierInfo" Multiplicity="1" />
+    <End Role="SupplierAddresses" Type="BIIDFinalModel.Store.SupplierAddresses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DetailsSupplierInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SupplierAddresses">
+        <PropertyRef Name="DetailsSupplierId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SupplierCategory_Sector">
+    <End Role="Sector" Type="BIIDFinalModel.Store.Sector" Multiplicity="1" />
+    <End Role="SupplierCategory" Type="BIIDFinalModel.Store.SupplierCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sector">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SupplierCategory">
+        <PropertyRef Name="SectorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SupplierDistrict_CustomerDistrict">
+    <End Role="CustomerDistrict" Type="BIIDFinalModel.Store.CustomerDistrict" Multiplicity="1" />
+    <End Role="SupplierDistrict" Type="BIIDFinalModel.Store.SupplierDistrict" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CustomerDistrict">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SupplierDistrict">
+        <PropertyRef Name="DistrictId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SupplierUpozilla_CustomerUpozilla">
+    <End Role="CustomerUpozilla" Type="BIIDFinalModel.Store.CustomerUpozilla" Multiplicity="1" />
+    <End Role="SupplierUpozilla" Type="BIIDFinalModel.Store.SupplierUpozilla" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CustomerUpozilla">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SupplierUpozilla">
+        <PropertyRef Name="UpozilaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SupplierUpozilla_SupplierDistrict">
+    <End Role="SupplierDistrict" Type="BIIDFinalModel.Store.SupplierDistrict" Multiplicity="1" />
+    <End Role="SupplierUpozilla" Type="BIIDFinalModel.Store.SupplierUpozilla" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SupplierDistrict">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SupplierUpozilla">
+        <PropertyRef Name="DistrictId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tips_Item">
+    <End Role="Item" Type="BIIDFinalModel.Store.Item" Multiplicity="1" />
+    <End Role="Tips" Type="BIIDFinalModel.Store.Tips" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tips">
+        <PropertyRef Name="ItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_UserRole">
+    <End Role="UserRole" Type="BIIDFinalModel.Store.UserRole" Multiplicity="0..1" />
+    <End Role="User" Type="BIIDFinalModel.Store.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserRole">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserLog_User">
+    <End Role="User" Type="BIIDFinalModel.Store.User" Multiplicity="1" />
+    <End Role="UserLog" Type="BIIDFinalModel.Store.UserLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserLog">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Variety_DetailsSupplierInfo">
+    <End Role="DetailsSupplierInfo" Type="BIIDFinalModel.Store.DetailsSupplierInfo" Multiplicity="1" />
+    <End Role="Variety" Type="BIIDFinalModel.Store.Variety" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DetailsSupplierInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Variety">
+        <PropertyRef Name="DetailsSupplierId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Variety_Item">
+    <End Role="Item" Type="BIIDFinalModel.Store.Item" Multiplicity="1" />
+    <End Role="Variety" Type="BIIDFinalModel.Store.Variety" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Variety">
+        <PropertyRef Name="ItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,26 @@
+﻿@model BIID.Entities.Content
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Content</legend>
+
+    <div class="display-label">ContentName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContentName)
+    </div>
+
+   <div class="display-label">Sector</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SectorId)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

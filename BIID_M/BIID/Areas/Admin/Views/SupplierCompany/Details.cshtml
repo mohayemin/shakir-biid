@@ -1,0 +1,29 @@
+﻿@model BIID.Entities.SupplierCategory
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutOfAdmin.cshtml";
+}
+
+<h2>Details supplier Company</h2>
+
+<fieldset>
+    <legend>Supplier Category</legend>
+
+     <div class="display-label">Sector</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Sector.Name)
+    </div>
+    
+    
+    <div class="display-label">Name</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+   
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

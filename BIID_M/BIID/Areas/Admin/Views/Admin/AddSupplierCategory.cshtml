@@ -1,0 +1,42 @@
+﻿@model BIID.Entities.SupplierCategory
+
+@{
+    ViewBag.Title = "AddSupplierCategory";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>AddSupplierCategory</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>SupplierCategory</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SectorId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SectorId)
+            @Html.ValidationMessageFor(model => model.SectorId)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

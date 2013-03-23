@@ -1,0 +1,89 @@
+﻿@model BIID.Entities.AgriculturalCulturalOperation
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_LayoutOfAdmin.cshtml";
+}
+}
+
+<h2>Edit Agricultural Cultural Operation</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Agricultural Cultural Operation</legend>
+
+        @Html.HiddenFor(model => model.Id)
+
+         <div class="editor-label">
+            @Html.LabelFor(model => model.ItemId, "Item")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("ItemId", String.Empty)
+            @Html.ValidationMessageFor(model => model.ItemId)
+        </div>
+        
+        
+        
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NameOfOperation)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.NameOfOperation)
+            @Html.ValidationMessageFor(model => model.NameOfOperation)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EarlyStage)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.EarlyStage)
+            @Html.ValidationMessageFor(model => model.EarlyStage)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MidStage)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.MidStage)
+            @Html.ValidationMessageFor(model => model.MidStage)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.BeforeFinalStage)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.BeforeFinalStage)
+            @Html.ValidationMessageFor(model => model.BeforeFinalStage)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FinalStage)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.FinalStage)
+            @Html.ValidationMessageFor(model => model.FinalStage)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Remarks)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.Remarks)
+            @Html.ValidationMessageFor(model => model.Remarks)
+        </div>
+
+       
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

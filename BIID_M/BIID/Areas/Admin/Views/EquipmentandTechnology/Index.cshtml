@@ -1,0 +1,74 @@
+﻿@model IEnumerable<BIID.Entities.EquipmentAndTechnology>
+@*@model IEnumerable<BIID.Entities.*@
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutOfAdmin.cshtml";
+}
+
+<h2>List of Equipment And Technology</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        
+        <th>
+            Item
+        </th>
+        <th>
+            NameOfEquipment
+        </th>
+        <th>
+            Brief
+        </th>
+        <th>
+            HowToUse
+        </th>
+        <th>
+            Precaution
+        </th>
+        <th>
+            Availability
+        </th>
+        <th>
+            Remarks
+        </th>
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Item.Name)
+        </td>
+       
+        <td>
+            @Html.DisplayFor(modelItem => item.NameOfEquipment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Brief)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HowToUse)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Precaution)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Availability)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Remarks)
+        </td>
+       
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

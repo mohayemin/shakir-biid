@@ -1,0 +1,59 @@
+﻿@model BIID.Entities.HarvestingManagement
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutOfAdmin.cshtml";
+}
+
+<h2>Details Harvesting Management</h2>
+
+<fieldset>
+    <legend>Harvesting Management</legend>
+
+    
+     <div class="display-label">Item</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Item.Name)
+    </div>
+    
+    <div class="display-label">HarvestingTime</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HarvestingTime)
+    </div>
+
+    <div class="display-label">Systems</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Systems)
+    </div>
+
+    <div class="display-label">Procedures</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Procedures)
+    </div>
+
+    <div class="display-label">Threshing</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Threshing)
+    </div>
+
+    <div class="display-label">Packaging</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Packaging)
+    </div>
+
+    <div class="display-label">Storage</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Storage)
+    </div>
+
+    <div class="display-label">Remarks</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Remarks)
+    </div>
+
+   
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

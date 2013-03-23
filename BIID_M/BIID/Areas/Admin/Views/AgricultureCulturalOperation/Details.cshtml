@@ -1,0 +1,54 @@
+﻿@model BIID.Entities.AgriculturalCulturalOperation
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutOfAdmin.cshtml";
+}
+
+<h2>Details Agricultural Cultural Operation</h2>
+
+<fieldset>
+    <legend>Agricultural Cultural Operation</legend>
+
+    
+     <div class="display-label">Item</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Item.Name)
+    </div>
+    
+    <div class="display-label">NameOfOperation</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NameOfOperation)
+    </div>
+
+    <div class="display-label">EarlyStage</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EarlyStage)
+    </div>
+
+    <div class="display-label">MidStage</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MidStage)
+    </div>
+
+    <div class="display-label">BeforeFinalStage</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BeforeFinalStage)
+    </div>
+
+    <div class="display-label">FinalStage</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FinalStage)
+    </div>
+
+    <div class="display-label">Remarks</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Remarks)
+    </div>
+
+   
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

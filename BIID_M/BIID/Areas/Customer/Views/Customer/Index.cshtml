@@ -1,0 +1,58 @@
+﻿@model BIID.Entities.CustmerProfile
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<fieldset>
+    <legend>Custmer Profile</legend>
+
+    <div class="display-label">CustomerId</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CustomerId)
+    </div>
+
+    <div class="display-label">CustomerName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CustomerName)
+    </div>
+
+    <div class="display-label">Contact</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Contact)
+    </div>
+
+    <div class="display-label">Email</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email)
+    </div>
+
+    <div class="display-label">District</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.District)
+    </div>
+
+    <div class="display-label">Upazilla</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Upazilla)
+    </div>
+
+   <div class="display-label">Complain</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Complain)
+    </div>
+   
+    <div class="display-label">Remarks</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Remarks)
+    </div>
+
+    
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

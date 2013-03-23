@@ -1,0 +1,42 @@
+﻿@model BIID.Entities.DetailsSupplierInfo
+
+@{
+    ViewBag.Title = "AddOrganization";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>AddOrganization</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>DetailsSupplierInfo</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SupplierCategoryId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SupplierCategoryId)
+            @Html.ValidationMessageFor(model => model.SupplierCategoryId)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

@@ -1,0 +1,72 @@
+﻿@model BIID.Entities.Fertilizer
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutOfAdmin.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Fertilizer</legend>
+
+     <div class="display-label">Item</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Item.Name)
+    </div>
+    
+    
+    <div class="display-label">Particulars</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Particulars)
+    </div>
+
+    <div class="display-label">TotalAmount</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TotalAmount)
+    </div>
+
+    <div class="display-label">Fertilizer1</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Fertilizer1)
+    </div>
+
+    <div class="display-label">Fertilizer2</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Fertilizer2)
+    </div>
+
+    <div class="display-label">Fertilizer3</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Fertilizer3)
+    </div>
+
+    <div class="display-label">Fertilizer4</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Fertilizer4)
+    </div>
+
+    <div class="display-label">Fertilizer5</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Fertilizer5)
+    </div>
+
+    <div class="display-label">Precaution</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Precaution)
+    </div>
+
+    <div class="display-label">Remarks</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Remarks)
+    </div>
+
+   
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

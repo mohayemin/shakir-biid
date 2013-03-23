@@ -1,0 +1,77 @@
+﻿@model IEnumerable<BIID.Entities.AgriculturalCulturalOperation>
+           
+           @*@model IEnumerable<BIID.Entities.AgriculturalCulturalOperation>*@
+
+@{
+    ViewBag.Title = "Index";
+     Layout = "~/Views/Shared/_LayoutOfAdmin.cshtml";
+}
+
+
+<h2>List of Agricultural Cultural Operation</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+       
+        <th>
+            Item
+        </th>
+        <th>
+            NameOfOperation
+        </th>
+        <th>
+            EarlyStage
+        </th>
+        <th>
+            MidStage
+        </th>
+        <th>
+            BeforeFinalStage
+        </th>
+        <th>
+            FinalStage
+        </th>
+        <th>
+            Remarks
+        </th>
+       
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+          <td>
+            @Html.DisplayFor(modelItem => item.Item.Name)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.NameOfOperation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EarlyStage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MidStage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BeforeFinalStage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FinalStage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Remarks)
+        </td>
+      
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

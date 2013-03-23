@@ -1,0 +1,59 @@
+﻿@model BIID.Entities.Variety
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutOfAdmin.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Variety</legend>
+
+    <div class="display-label">VarietyName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.VarietyName)
+    </div>
+
+    <div class="display-label">Kharip1</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Kharip1)
+    </div>
+
+    <div class="display-label">Kharip2</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Kharip2)
+    </div>
+
+    <div class="display-label">RobiIndustrious</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RobiIndustrious)
+    </div>
+
+    <div class="display-label">AlltheYear</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AlltheYear)
+    </div>
+
+    <div class="display-label">DetailsSupplierInfo</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DetailsSupplierInfo.Name)
+    </div>
+
+    <div class="display-label">Remarks</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Remarks)
+    </div>
+
+    <div class="display-label">Item</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Item.Name)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

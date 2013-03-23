@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BIIDFinalModelStoreContainer" CdmEntityContainer="BIIDFinalEntities">
+    <EntitySetMapping Name="AgriculturalCulturalOperations">
+      <EntityTypeMapping TypeName="BIIDFinalModel.AgriculturalCulturalOperation">
+        <MappingFragment StoreEntitySet="AgriculturalCulturalOperation">
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="FinalStage" ColumnName="FinalStage" />
+          <ScalarProperty Name="BeforeFinalStage" ColumnName="BeforeFinalStage" />
+          <ScalarProperty Name="MidStage" ColumnName="MidStage" />
+          <ScalarProperty Name="EarlyStage" ColumnName="EarlyStage" />
+          <ScalarProperty Name="NameOfOperation" ColumnName="NameOfOperation" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BirdAndLivestockCulturalOperations">
+      <EntityTypeMapping TypeName="BIIDFinalModel.BirdAndLivestockCulturalOperation">
+        <MappingFragment StoreEntitySet="BirdAndLivestockCulturalOperation">
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Precaution" ColumnName="Precaution" />
+          <ScalarProperty Name="FarmManagement" ColumnName="FarmManagement" />
+          <ScalarProperty Name="FoodManagement" ColumnName="FoodManagement" />
+          <ScalarProperty Name="HeatManagement" ColumnName="HeatManagement" />
+          <ScalarProperty Name="LightManagement" ColumnName="LightManagement" />
+          <ScalarProperty Name="HouseManagement" ColumnName="HouseManagement" />
+          <ScalarProperty Name="StageName" ColumnName="StageName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BirdAndLiveStockVaccinations">
+      <EntityTypeMapping TypeName="BIIDFinalModel.BirdAndLiveStockVaccination">
+        <MappingFragment StoreEntitySet="BirdAndLiveStockVaccination">
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Precaution" ColumnName="Precaution" />
+          <ScalarProperty Name="ApplicationProcedure" ColumnName="ApplicationProcedure" />
+          <ScalarProperty Name="NameOfVaccine" ColumnName="NameOfVaccine" />
+          <ScalarProperty Name="NameOfDisease" ColumnName="NameOfDisease" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="BIIDFinalModel.Category">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="SectorId" ColumnName="SectorId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contents">
+      <EntityTypeMapping TypeName="BIIDFinalModel.Content">
+        <MappingFragment StoreEntitySet="Content">
+          <ScalarProperty Name="SectorId" ColumnName="SectorId" />
+          <ScalarProperty Name="ContentName" ColumnName="ContentName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustmerProfiles">
+      <EntityTypeMapping TypeName="BIIDFinalModel.CustmerProfile">
+        <MappingFragment StoreEntitySet="CustmerProfile">
+          <ScalarProperty Name="Complain" ColumnName="Complain" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Upazilla" ColumnName="Upazilla" />
+          <ScalarProperty Name="District" ColumnName="District" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerDistricts">
+      <EntityTypeMapping TypeName="BIIDFinalModel.CustomerDistrict">
+        <MappingFragment StoreEntitySet="CustomerDistrict">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerSearches">
+      <EntityTypeMapping TypeName="BIIDFinalModel.CustomerSearch">
+        <MappingFragment StoreEntitySet="CustomerSearch">
+          <ScalarProperty Name="SearchSubjectId" ColumnName="SearchSubjectId" />
+          <ScalarProperty Name="CustmerId" ColumnName="CustmerId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerUpozillas">
+      <EntityTypeMapping TypeName="BIIDFinalModel.CustomerUpozilla">
+        <MappingFragment StoreEntitySet="CustomerUpozilla">
+          <ScalarProperty Name="DistrictId" ColumnName="DistrictId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetailsSupplierInfoes">
+      <EntityTypeMapping TypeName="BIIDFinalModel.DetailsSupplierInfo">
+        <MappingFragment StoreEntitySet="DetailsSupplierInfo">
+          <ScalarProperty Name="SupplierCategoryId" ColumnName="SupplierCategoryId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DiseaseAndPestManagements">
+      <EntityTypeMapping TypeName="BIIDFinalModel.DiseaseAndPestManagement">
+        <MappingFragment StoreEntitySet="DiseaseAndPestManagement">
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="DetailsSupplierId" ColumnName="DetailsSupplierId" />
+          <ScalarProperty Name="ControlMeasures" ColumnName="ControlMeasures" />
+          <ScalarProperty Name="Preventive" ColumnName="Preventive" />
+          <ScalarProperty Name="Symptoms" ColumnName="Symptoms" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EquipmentAndTechnologies">
+      <EntityTypeMapping TypeName="BIIDFinalModel.EquipmentAndTechnology">
+        <MappingFragment StoreEntitySet="EquipmentAndTechnology">
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Availability" ColumnName="Availability" />
+          <ScalarProperty Name="Precaution" ColumnName="Precaution" />
+          <ScalarProperty Name="HowToUse" ColumnName="HowToUse" />
+          <ScalarProperty Name="Brief" ColumnName="Brief" />
+          <ScalarProperty Name="NameOfEquipment" ColumnName="NameOfEquipment" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fertilizers">
+      <EntityTypeMapping TypeName="BIIDFinalModel.Fertilizer">
+        <MappingFragment StoreEntitySet="Fertilizer">
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Precaution" ColumnName="Precaution" />
+          <ScalarProperty Name="Fertilizer5" ColumnName="Fertilizer5" />
+          <ScalarProperty Name="Fertilizer4" ColumnName="Fertilizer4" />
+          <ScalarProperty Name="Fertilizer3" ColumnName="Fertilizer3" />
+          <ScalarProperty Name="Fertilizer2" ColumnName="Fertilizer2" />
+          <ScalarProperty Name="Fertilizer1" ColumnName="Fertilizer1" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="Particulars" ColumnName="Particulars" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FishCulturalOperations">
+      <EntityTypeMapping TypeName="BIIDFinalModel.FishCulturalOperation">
+        <MappingFragment StoreEntitySet="FishCulturalOperation">
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Precaution" ColumnName="Precaution" />
+          <ScalarProperty Name="AgeLimit" ColumnName="AgeLimit" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="Density" ColumnName="Density" />
+          <ScalarProperty Name="FoodManagement" ColumnName="FoodManagement" />
+          <ScalarProperty Name="WaterManagement" ColumnName="WaterManagement" />
+          <ScalarProperty Name="PondManagement" ColumnName="PondManagement" />
+          <ScalarProperty Name="ManagementName" ColumnName="ManagementName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HarvestingManagements">
+      <EntityTypeMapping TypeName="BIIDFinalModel.HarvestingManagement">
+        <MappingFragment StoreEntitySet="HarvestingManagement">
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Storage" ColumnName="Storage" />
+          <ScalarProperty Name="Packaging" ColumnName="Packaging" />
+          <ScalarProperty Name="Threshing" ColumnName="Threshing" />
+          <ScalarProperty Name="Procedures" ColumnName="Procedures" />
+          <ScalarProperty Name="Systems" ColumnName="Systems" />
+          <ScalarProperty Name="HarvestingTime" ColumnName="HarvestingTime" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Items">
+      <EntityTypeMapping TypeName="BIIDFinalModel.Item">
+        <MappingFragment StoreEntitySet="Item">
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LivestockFeedPreservations">
+      <EntityTypeMapping TypeName="BIIDFinalModel.LivestockFeedPreservation">
+        <MappingFragment StoreEntitySet="LivestockFeedPreservation">
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Precaution" ColumnName="Precaution" />
+          <ScalarProperty Name="FeedUse" ColumnName="FeedUse" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Ingradient" ColumnName="Ingradient" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NutritionalStatus">
+      <EntityTypeMapping TypeName="BIIDFinalModel.NutritionalStatu">
+        <MappingFragment StoreEntitySet="NutritionalStatus">
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="FoodValue" ColumnName="FoodValue" />
+          <ScalarProperty Name="AmountOfNutrient" ColumnName="AmountOfNutrient" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrganizationSectorRelations">
+      <EntityTypeMapping TypeName="BIIDFinalModel.OrganizationSectorRelation">
+        <MappingFragment StoreEntitySet="OrganizationSectorRelation">
+          <ScalarProperty Name="SectorId" ColumnName="SectorId" />
+          <ScalarProperty Name="OrganizationId" ColumnName="OrganizationId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Plantings">
+      <EntityTypeMapping TypeName="BIIDFinalModel.Planting">
+        <MappingFragment StoreEntitySet="Planting">
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Seeding" ColumnName="Seeding" />
+          <ScalarProperty Name="PlantingSpace" ColumnName="PlantingSpace" />
+          <ScalarProperty Name="PlantingSystems" ColumnName="PlantingSystems" />
+          <ScalarProperty Name="PlantingTime" ColumnName="PlantingTime" />
+          <ScalarProperty Name="SoliType" ColumnName="SoliType" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PreparationOfFeeds">
+      <EntityTypeMapping TypeName="BIIDFinalModel.PreparationOfFeed">
+        <MappingFragment StoreEntitySet="PreparationOfFeed">
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="TypesOfFeed" ColumnName="TypesOfFeed" />
+          <ScalarProperty Name="FeedClass" ColumnName="FeedClass" />
+          <ScalarProperty Name="Precaution" ColumnName="Precaution" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Ingredient" ColumnName="Ingredient" />
+          <ScalarProperty Name="FeedName" ColumnName="FeedName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sectors">
+      <EntityTypeMapping TypeName="BIIDFinalModel.Sector">
+        <MappingFragment StoreEntitySet="Sector">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SeedProductions">
+      <EntityTypeMapping TypeName="BIIDFinalModel.SeedProduction">
+        <MappingFragment StoreEntitySet="SeedProduction">
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="SeedStorage" ColumnName="SeedStorage" />
+          <ScalarProperty Name="Condition" ColumnName="Condition" />
+          <ScalarProperty Name="ProcedureOfSeed" ColumnName="ProcedureOfSeed" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SupplierAddresses">
+      <EntityTypeMapping TypeName="BIIDFinalModel.SupplierAddress">
+        <MappingFragment StoreEntitySet="SupplierAddresses">
+          <ScalarProperty Name="WebAddress" ColumnName="WebAddress" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="UpozillaId" ColumnName="UpozillaId" />
+          <ScalarProperty Name="DistrictId" ColumnName="DistrictId" />
+          <ScalarProperty Name="DetailsSupplierId" ColumnName="DetailsSupplierId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SupplierCategories">
+      <EntityTypeMapping TypeName="BIIDFinalModel.SupplierCategory">
+        <MappingFragment StoreEntitySet="SupplierCategory">
+          <ScalarProperty Name="SectorId" ColumnName="SectorId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SupplierDistricts">
+      <EntityTypeMapping TypeName="BIIDFinalModel.SupplierDistrict">
+        <MappingFragment StoreEntitySet="SupplierDistrict">
+          <ScalarProperty Name="DetailsSupplierInfoId" ColumnName="DetailsSupplierInfoId" />
+          <ScalarProperty Name="DistrictId" ColumnName="DistrictId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SupplierUpozillas">
+      <EntityTypeMapping TypeName="BIIDFinalModel.SupplierUpozilla">
+        <MappingFragment StoreEntitySet="SupplierUpozilla">
+          <ScalarProperty Name="DistrictId" ColumnName="DistrictId" />
+          <ScalarProperty Name="UpozilaId" ColumnName="UpozilaId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="BIIDFinalModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tips">
+      <EntityTypeMapping TypeName="BIIDFinalModel.Tip">
+        <MappingFragment StoreEntitySet="Tips">
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Tips" ColumnName="Tips" />
+          <ScalarProperty Name="TipsTopic" ColumnName="TipsTopic" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="BIIDFinalModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserLogs">
+      <EntityTypeMapping TypeName="BIIDFinalModel.UserLog">
+        <MappingFragment StoreEntitySet="UserLog">
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="Activity" ColumnName="Activity" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserRoles">
+      <EntityTypeMapping TypeName="BIIDFinalModel.UserRole">
+        <MappingFragment StoreEntitySet="UserRole">
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Varieties">
+      <EntityTypeMapping TypeName="BIIDFinalModel.Variety">
+        <MappingFragment StoreEntitySet="Variety">
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="DetailsSupplierId" ColumnName="DetailsSupplierId" />
+          <ScalarProperty Name="AlltheYear" ColumnName="AlltheYear" />
+          <ScalarProperty Name="RobiIndustrious" ColumnName="RobiIndustrious" />
+          <ScalarProperty Name="Kharip2" ColumnName="Kharip2" />
+          <ScalarProperty Name="Kharip1" ColumnName="Kharip1" />
+          <ScalarProperty Name="VarietyName" ColumnName="VarietyName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

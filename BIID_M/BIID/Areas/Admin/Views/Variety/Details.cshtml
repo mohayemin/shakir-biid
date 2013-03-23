@@ -1,0 +1,60 @@
+﻿@model BIID.Entities.Variety
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutOfAdmin.cshtml";
+}
+
+<h2>Variety Details</h2>
+
+<fieldset>
+    <legend>Variety</legend>
+
+     <div class="display-label">Item</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Item.Name)
+    </div>
+   
+    <div class="display-label">DetailsSupplierInfo</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DetailsSupplierInfo.Name)
+    </div>
+   
+    <div class="display-label">VarietyName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.VarietyName)
+    </div>
+
+    <div class="display-label">Kharip1</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Kharip1)
+    </div>
+
+    <div class="display-label">Kharip2</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Kharip2)
+    </div>
+
+    <div class="display-label">RobiIndustrious</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RobiIndustrious)
+    </div>
+
+    <div class="display-label">AlltheYear</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AlltheYear)
+    </div>
+
+   
+
+    <div class="display-label">Remarks</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Remarks)
+    </div>
+
+  
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,53 @@
+﻿@model BIID.Entities.Planting
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutOfAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Planting</legend>
+
+    <div class="display-label">Item</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Item.Name)
+    </div>
+   
+    <div class="display-label">SoliType</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SoliType)
+    </div>
+
+    <div class="display-label">PlantingTime</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PlantingTime)
+    </div>
+
+    <div class="display-label">PlantingSystems</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PlantingSystems)
+    </div>
+
+    <div class="display-label">PlantingSpace</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PlantingSpace)
+    </div>
+
+    <div class="display-label">Seeding</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Seeding)
+    </div>
+
+    <div class="display-label">Remarks</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Remarks)
+    </div>
+
+   
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

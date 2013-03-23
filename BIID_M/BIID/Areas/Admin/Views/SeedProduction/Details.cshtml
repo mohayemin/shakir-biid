@@ -1,0 +1,43 @@
+﻿@model BIID.Entities.SeedProduction
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutOfAdmin.cshtml";
+}
+
+<h2>Details Seed Production</h2>
+
+<fieldset>
+    <legend>Seed Production</legend>
+    
+     <div class="display-label">Item</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Item.Name)
+    </div>
+
+    <div class="display-label">ProcedureOfSeed</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ProcedureOfSeed)
+    </div>
+
+    <div class="display-label">Condition</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Condition)
+    </div>
+
+    <div class="display-label">SeedStorage</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SeedStorage)
+    </div>
+
+    <div class="display-label">Remarks</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Remarks)
+    </div>
+
+   
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

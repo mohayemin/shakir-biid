@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "UserLogReport";
+}
+
+<h2>UserLogReport</h2>
+@using (Html.BeginForm("GenerateUserLogReport", "Report"))
+{
+     <p><strong> Simple Report</strong></p>
+    <input type="submit" value="Show simple" />
+}

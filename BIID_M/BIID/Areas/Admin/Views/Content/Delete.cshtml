@@ -1,0 +1,29 @@
+﻿@model BIID.Entities.Content
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutOfAdmin.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Content</legend>
+
+    <div class="display-label">ContentName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContentName)
+    </div>
+
+   <div class="display-label">Sector</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Sector.Name)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

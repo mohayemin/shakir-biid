@@ -1,0 +1,152 @@
+﻿@using BIID
+@using BIID.Implementations
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <a><img src="@Url.Content("~/Content/Images/head.jpg")" width="300px" height="120px" style=" position: relative; left: 70px; top: 10px; ", alt="Edit" /></a>
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery-1.5.1.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/modernizr-1.7.min.js")" type="text/javascript"></script>
+    <style type="text/css">
+            .myMenu { margin:0; padding:0;} .myMenu li { list-style:none; float:left; font:12px Arial, Helvetica, sans-serif #111; }
+            .myMenu li a:link, .myMenu li a:visited
+            { display:block; text-decoration:none; background-color:azure; padding: 0.5em 2em; margin:0; border-right: 1px solid #fff; color:#111; } 
+            .myMenu li a:hover { background-color:azure; } /*style the sub menu*/ 
+            .myMenu li ul { position:absolute; visibility:hidden; border-top:1px solid #fff; margin:0; padding:0; } 
+            .myMenu li ul li { display:inline; float:none; } .myMenu li ul li a:link, .myMenu li ul li a:visited { background-color:azure; width:auto; }
+             .myMenu li ul li a:hover { background-color:azure; }
+        </style>
+</head>
+<body>
+    <div class="page">
+        <header>
+@*                <div id="title">
+                    <h1>BIID Solution</h1>
+                </div>*@
+                 <div id="logindisplay">
+                    @Html.Partial("_LogOnPartial")
+                </div>
+                
+               
+                <nav>
+                    <ul id="nav" class="myMenu">
+                        
+                       <li><a href="#" class="selected">AgrilInfo</a>
+                            <ul>
+                                <li>
+                                    @Html.ActionLink("Agriculture", "Index", "Agriculture", new { area = "AgriInfo" }, null) 
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Directory", "Index", "Directory", new { area = "DirectoryInfo" }, null)        
+                                </li>
+                            </ul>
+                            <div class="clear"></div>
+                        </li>
+                    
+                        <li>@Html.ActionLink("Health", "Index", "Health", new { area = "HealthInfo" }, null)</li>
+
+                        <li>@Html.ActionLink("MSME", "Index", "Health")</li>
+                        <li>@Html.ActionLink("Tourism", "Index", "Health")</li>
+                        <li>@Html.ActionLink("Education", "Index", "Health")</li>
+                        <li>@Html.ActionLink("Complain", "Index", "Health")</li>
+                        <li>@Html.ActionLink("Jobs", "Index", "Health")</li>
+                        <li>@Html.ActionLink("Emergency", "Index", "Health")</li>
+                        <li>@Html.ActionLink("Others", "Index", "Health")</li>
+                        
+                        <li ><a href="#" class="selected" >Admin Controls</a>
+                    <ul id="onlyForAdmins">
+                    <li>
+
+<a href="/admin/sectors/create">Add Sector</a>
+</li>
+<li>
+    <a href="/admin/categories/create">Add Category</a>
+</li>
+<li>
+    <a href="/admin/items/create">Add Item</a>
+</li>
+<li>
+    
+    <a href="/admin/Content/create">Add Content</a>
+</li>
+
+<li>
+    <a href="/admin/variety/create">Add Variety Data</a>
+</li>
+
+<li>
+    <a href="/admin/Planting/create">Add Planting Data</a>
+    
+</li>
+
+<li>
+    <a href="/admin/fertilizer/create">Add Fertilizer Data</a>  
+</li>
+
+<li>
+    <a href="/admin/NutartionStatus/create">Add NutrationStatus Data</a>  
+</li>
+
+<li>
+    <a href="/admin/AgricultureCulturalOperation/create">Add AgricultureCulturalOperation</a>  
+</li>
+
+<li>
+    <a href="/admin/Tips/create">Add Tips data</a>  
+</li>
+
+<li>
+    <a href="/admin/EquipmentandTechnology/create">Add Equipment and Technology</a>  
+</li>
+
+
+<li>
+    <a href="/admin/PreparetionofFeed/create">Add PreparetionofFeed Data</a>  
+</li>
+
+<li>
+    <a href="/admin/HarvestingManagement/create">Add HarvestingManagement Data</a>  
+</li>
+
+
+<li>
+    <a href="/admin/SeedProduction/create">AddSeedproduction data</a>  
+</li>
+
+<li>
+    <a href="/admin/User/create">Add User</a>  
+</li>
+
+<li>
+    <a href="/admin/SupplierCompany/create">Add Supplier Company</a>  
+</li>
+
+
+    <li>
+    <a href="/admin/Organization/create">Add Organization</a>  
+</li>
+
+</ul>
+                     <div class="clear"></div>
+                        </li>
+  
+                    
+                    </ul>
+                       
+         
+                </nav>
+               
+            </header>
+        <section id="main">
+                @RenderBody()
+            </section>
+        <footer>
+            </footer>
+    </div>
+</body>
+<script type="text/javascript">
+    $(document).ready(function () { $('.myMenu > li').bind('mouseover', openSubMenu); $('.myMenu > li').bind('mouseout', closeSubMenu); function openSubMenu() { $(this).find('ul').css('visibility', 'visible'); }; function closeSubMenu() { $(this).find('ul').css('visibility', 'hidden'); }; });
+</script>
+</html>

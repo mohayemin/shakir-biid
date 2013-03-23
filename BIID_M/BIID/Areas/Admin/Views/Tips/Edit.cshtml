@@ -1,0 +1,64 @@
+﻿@model BIID.Entities.Tip
+
+@{
+    ViewBag.Title = "Edit";
+     Layout = "~/Views/Shared/_LayoutOfAdmin.cshtml";
+}
+
+
+<h2>Edit Tips</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Tips</legend>
+
+        @Html.HiddenFor(model => model.Id)
+
+       <div class="editor-label">
+            @Html.LabelFor(model => model.ItemId, "Item")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("ItemId", String.Empty)
+            @Html.ValidationMessageFor(model => model.ItemId)
+        </div>
+       
+       
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TipsTopic)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.TipsTopic)
+            @Html.ValidationMessageFor(model => model.TipsTopic)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Tips)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.Tips)
+            @Html.ValidationMessageFor(model => model.Tips)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Remarks)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.Remarks)
+            @Html.ValidationMessageFor(model => model.Remarks)
+        </div>
+
+        
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

@@ -1,0 +1,90 @@
+﻿@model BIID.Entities.SupplierAddress
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutOfAdmin.cshtml";
+}
+
+<h2>Create Supplier Address</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Supplier Address</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DetailsSupplierId, "DetailsSupplierInfo")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("DetailsSupplierId", String.Empty)
+            @Html.ValidationMessageFor(model => model.DetailsSupplierId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DistrictId, "CustomerDistrict")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("DistrictId", String.Empty)
+            @Html.ValidationMessageFor(model => model.DistrictId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.UpozillaId, "CustomerUpozilla")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("UpozillaId", String.Empty)
+            @Html.ValidationMessageFor(model => model.UpozillaId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Address)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Address)
+            @Html.ValidationMessageFor(model => model.Address)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Contact)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Contact)
+            @Html.ValidationMessageFor(model => model.Contact)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Email)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Email)
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Remarks)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Remarks)
+            @Html.ValidationMessageFor(model => model.Remarks)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.WebAddress)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.WebAddress)
+            @Html.ValidationMessageFor(model => model.WebAddress)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

@@ -1,0 +1,38 @@
+﻿@model BIID.Entities.NutritionalStatu
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutOfAdmin.cshtml";
+}
+
+<h2>Details Nutritional Status</h2>
+
+<fieldset>
+    <legend>Nutritional Status</legend>
+
+    <div class="display-label">Item</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Item.Name)
+    </div>
+
+    <div class="display-label">AmountOfNutrient</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AmountOfNutrient)
+    </div>
+
+    <div class="display-label">FoodValue</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FoodValue)
+    </div>
+
+    <div class="display-label">Remarks</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Remarks)
+    </div>
+
+    
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

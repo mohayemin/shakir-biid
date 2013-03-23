@@ -1,0 +1,14 @@
+c:\users\shakir\documents\visual studio 2010\Projects\BIID_M\BIID\bin\BIID.dll
+c:\users\shakir\documents\visual studio 2010\Projects\BIID_M\BIID\bin\BIID.pdb
+c:\users\shakir\documents\visual studio 2010\Projects\BIID_M\BIID\bin\EntityFramework.dll
+c:\users\shakir\documents\visual studio 2010\Projects\BIID_M\BIID\bin\EntityFramework.xml
+c:\users\shakir\documents\visual studio 2010\Projects\BIID_M\BIID\obj\Debug\BIID.csprojResolveAssemblyReference.cache
+c:\users\shakir\documents\visual studio 2010\Projects\BIID_M\BIID\obj\Debug\BIID.dll
+c:\users\shakir\documents\visual studio 2010\Projects\BIID_M\BIID\obj\Debug\BIID.pdb
+C:\Users\Mohayemin-\Desktop\BIID_M\BIID\obj\Debug\BIID.csprojResolveAssemblyReference.cache
+C:\Users\Mohayemin-\Desktop\BIID_M\BIID\obj\Debug\BIID.dll
+C:\Users\Mohayemin-\Desktop\BIID_M\BIID\obj\Debug\BIID.pdb
+C:\Users\Mohayemin-\Desktop\BIID_M\BIID\bin\BIID.dll
+C:\Users\Mohayemin-\Desktop\BIID_M\BIID\bin\BIID.pdb
+C:\Users\Mohayemin-\Desktop\BIID_M\BIID\bin\Newtonsoft.Json.dll
+C:\Users\Mohayemin-\Desktop\BIID_M\BIID\bin\Newtonsoft.Json.xml
